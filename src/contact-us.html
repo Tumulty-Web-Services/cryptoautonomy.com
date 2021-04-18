@@ -865,17 +865,56 @@
                                        <div data-ux="GridCell" class="x-el x-el-div c2-1 c2-2 c2-1e c2-1p c2-1q c2-1r c2-1s c2-1t c2-1u c2-1v c2-1w c2-3 c2-4 c2-1x c2-1y c2-1z c2-20 c2-21 c2-22 c2-23 c2-5 c2-24 c2-25 c2-26 c2-6 c2-7 c2-8">
                                         <h4 style="font-family: 'Open Sans', arial, sans-serif; text-align: center;font-weight: 400;letter-spacing: 0.045em;line-height: 1.25;color: rgb(27, 27, 27);font-size:22px;">EMAIL US</h4>
                                           <div data-ux="Block" data-aid="CONTACT_FORM_CONTAINER_REND" class="x-el x-el-div c2-1 c2-2 c2-i c2-27 c2-3 c2-4 c2-5 c2-6 c2-7 c2-8">
-                                            <form netlify name="contact">
-                                              <label>Full name
-                                                <input name="fullName" type="text" />
-                                              </label>
-                                              <label>Email
-                                                <input name="email" type="email" />
-                                              </label>
-                                              <label>Message
-                                                <input type="textarea" name="message" />
-                                              </label>
-                                              <button type="submit">Submit</button>                                              
+                                            <form netlify name="contact" style="max-width:800px; margin-left:auto; margin-right:auto; display:block">
+                                              <input role="textbox" name="name" style="border-bottom: 1px solid #e9e9e9;" placeholder="Name" aria-multiline="false" type="text" data-ux="InputFloatLabel" id="input27" data-aid="CONTACT_FORM_NAME" data-typography="BodyAlpha" class="x-el x-el-input c2-1 c2-2 c2-2h c2-2i c2-k c2-2j c2-2k c2-2l c2-2m c2-2n c2-2o c2-2p c2-2q c2-2r c2-2s c2-3 c2-2t c2-4 c2-10 c2-2u c2-2v c2-2w c2-2x c2-2y c2-2z c2-30 c2-31 c2-32 c2-33 c2-5 c2-6 c2-7 c2-8" value="">
+                                              <label data-ux="InputFloatLabelLabel" for="input27" data-typography="BodyAlpha" class="x-el x-el-label c2-1 c2-2 c2-w c2-x c2-34 c2-35 c2-36 c2-37 c2-38 c2-3 c2-2t c2-4 c2-10 c2-5 c2-6 c2-7 c2-8"style="visibility: hidden;">Name</label>
+                                              <input role="textbox" name="email" style="border-bottom: 1px solid #e9e9e9;" aria-multiline="false" type="text" data-ux="InputFloatLabel" id="input36" data-aid="CONTACT_FORM_EMAIL" data-typography="BodyAlpha" placeholder="Email *" class="x-el x-el-input c2-1 c2-2 c2-2h c2-2i c2-k c2-2j c2-2k c2-2l c2-2m c2-2n c2-2o c2-2p c2-2q c2-2r c2-2s c2-3 c2-2t c2-4 c2-10 c2-2u c2-2v c2-2w c2-2x c2-2y c2-2z c2-30 c2-31 c2-32 c2-33 c2-5 c2-6 c2-7 c2-8" value="">
+                                              <label data-ux="InputFloatLabelLabel" for="input36" data-typography="BodyAlpha" class="x-el x-el-label c2-1 c2-2 c2-w c2-x c2-34 c2-35 c2-36 c2-37 c2-38 c2-3 c2-2t c2-4 c2-10 c2-5 c2-6 c2-7 c2-8" style="visibility: hidden;">Email *</label>
+                                              <textarea style="border: 1px solid #e9e9e9;" role="textbox" aria-multiline="true" rows="4" aria-label="Message" data-ux="InputTextArea" placeholder="Message" data-aid="CONTACT_FORM_MESSAGE" data-typography="BodyAlpha" class="x-el x-el-textarea c2-1 c2-2 c2-2h c2-2i c2-k c2-39 c2-3a c2-2l c2-3b c2-3c c2-3d c2-2p c2-2q c2-3e c2-2s c2-3f c2-3g c2-3 c2-2t c2-4 c2-10 c2-2u c2-2v c2-2w c2-33 c2-5 c2-6 c2-7 c2-8"></textarea>
+                                              <div style="text-align: center;">
+                                                <style>
+                                                  #contact-btn{ 
+                                                    font-weight: 700;
+                                                    background-color: white;
+                                                    border-color: rgb(223, 220, 213);
+                                                    font-size: 14px;
+                                                    width: auto;
+                                                    text-shadow: none;
+                                                    font-weight: 700;
+                                                    border-left-width: 1px;
+                                                    border-right-width: 1px;
+                                                    border-top-width: 1px;
+                                                    border-bottom-width: 1px;
+                                                    border-radius: 48px;
+                                                    min-height:56px;
+                                                    padding-top:8px;
+                                                    padding-bottom: 8px;
+                                                    padding-right:40px;
+                                                    padding-left:40px;
+                                                    display: inline-flex;
+                                                    transition: all 0.3s ease 0s;
+                                                    border-style: solid;
+                                                    text-align: center;
+                                                    letter-spacing: 0.214em;
+                                                    text-transform: uppercase;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    font-family: "Open Sans", arial, sans-serif;
+                                                    margin-top: 2em;
+                                                    margin-bottom: 2em;
+                                                  }
+                                                  #contact-btn:hover {
+                                                    color: rgb(23, 23, 23);
+                                                    background-color: rgb(223, 220, 213);
+                                                    cursor: pointer;
+                                                  }
+                                                </style>
+                                                <button
+                                                  id="contact-btn"
+                                                  type="submit">
+                                                    Send
+                                                </button>
+                                              </div>                                              
                                             </form>
                                           </div>
                                        </div>
