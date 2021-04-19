@@ -39,6 +39,7 @@ const closedIcon = `<div class="circle" id="dark-circle"><svg style="color:#fff;
         formDiv.style.position = 'fixed';
         formDiv.style.bottom = '15%';
         formDiv.style.left = '70%';
+        formDiv.style.zIndex ='9999';
         formDiv.setAttribute("id", "form-x");
         div.setAttribute("id", "popup-container");   
         div.innerHTML = messageIcon;
