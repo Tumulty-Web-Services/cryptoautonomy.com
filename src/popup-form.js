@@ -27,7 +27,7 @@ const form = (elm) => {
     // create the form
     const form = document.createElement('form');
     form.setAttribute('name',"popup");
-    form.setAttribute('netlify',true);
+    form.setAttribute('data-netlify',true);
     form.setAttribute('id', 'form-block');
 
     var name = document.createElement("input"); //input element, text
@@ -56,6 +56,7 @@ const form = (elm) => {
     button.setAttribute('type',"submit");
     button.setAttribute('id', 'popup-btn');
     button.setAttribute('value',"Send");
+    button.innerText = "Send"
 
     form.appendChild(name);
     form.appendChild(email);
