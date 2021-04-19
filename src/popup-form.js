@@ -28,6 +28,7 @@ const form = (elm) => {
     const form = document.createElement('form');
     form.setAttribute('name',"popup");
     form.setAttribute('data-netlify',true);
+    form.setAttribute('method', 'POST')
     form.setAttribute('id', 'form-block');
 
     var name = document.createElement("input"); //input element, text
@@ -44,7 +45,7 @@ const form = (elm) => {
 
     var textarea = document.createElement('input');
     textarea.setAttribute('type',"textarea");
-    textarea.setAttribute('name',"email");
+    textarea.setAttribute('name',"message");
     textarea.setAttribute('role', 'textbox');
     textarea.setAttribute('class', 'form-textarea');
     textarea.setAttribute('aria-multiline', true);
