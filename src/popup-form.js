@@ -28,7 +28,8 @@ const form = (elm) => {
     const form = document.createElement('form');
     form.setAttribute('name',"popup");
     form.setAttribute('data-netlify',true);
-    form.setAttribute('method', 'POST')
+    form.setAttribute('method', 'POST');
+    form.setAttribute('action', '/');
     form.setAttribute('id', 'form-block');
 
     var name = document.createElement("input"); //input element, text
