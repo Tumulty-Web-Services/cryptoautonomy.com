@@ -1,3 +1,4 @@
+// https://reactjs.org/docs/add-react-to-a-website.html
 const form = () => `
     <div id="form-container">
         <svg id="top-svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" data-ux="Icon" class="x-el x-el-svg c2-1 c2-2 c2-22 c2-r c2-s c2-1m c2-23 c2-24 c2-j c2-3 c2-4 c2-25 c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19.245 4.313a1.065 1.065 0 0 0-1.508 0L11.78 10.27 5.82 4.313A1.065 1.065 0 1 0 4.312 5.82l5.958 5.958-5.958 5.959a1.067 1.067 0 0 0 1.508 1.508l5.959-5.958 5.958 5.958a1.065 1.065 0 1 0 1.508-1.508l-5.958-5.959 5.958-5.958a1.065 1.065 0 0 0 0-1.508"></path></svg>
@@ -11,11 +12,22 @@ const form = () => `
                 <input type="email" name="email" class="form-input" placeholder="Email" />
                 <label for="form-name" style="visibility:hidden;">Email</label>
                 <textarea role="textbox" class="form-textarea" aria-multiline="true" rows="4" aria-label="How can we help?*" data-ux="InputTextArea" placeholder="How can we help?*" data-aid="How can we help?"></textarea>
-                <button id="popup-btn" type="submit">Send</button>
+                <button id="popup-btn" onclick="handleSubmit()" type="submit">Send</button>
             </form>
         </div>
     </div>
 `;
+
+const handleSubmit = () => {
+    let myForm = document.getElementById('form-container');
+    let formData = new FormData(myForm)
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    }).then(() => console.log('Form successfully submitted')).catch((error) =>
+      alert(error))
+  }
 
 
 const messageIcon = `<div class="circle" id="biege-cirlce">
@@ -58,7 +70,6 @@ const closedIcon = `<div class="circle" id="dark-circle"><svg style="color:#fff;
                 document.getElementById('form-x').innerHTML = ''; 
             }
         });
-
         
     });
 
